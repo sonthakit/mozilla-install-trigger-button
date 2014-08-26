@@ -2,7 +2,7 @@
 <!-- =====================================================================================
 	Mozilla Install Trigger Button by Sonthakit Leelahanon.
 	Gadget URL
-	http://mozilla-install-trigger-button.googlecode.com/svn/trunk/mozilla-install-trigger-button.xml
+	http://mozilla-install-trigger-button.googlecode.com/svn/mozilla-install-trigger-button.xml
 	Example Image Source = https://sites.google.com/site/sonthakit/FreeInstall.png
 	Button is "free install" text
 ====================================================================================== -->
@@ -20,7 +20,7 @@
 				var prefUrl = prefs.getString("url");
 				var prefHash = "sha1:" + prefs.getString("hash");
 				var prefImgSrc = prefs.getString("imgSrc");
-				document.getElementById("content_div").innerHTML = "<img src='" + prefImgSrc + "' onclick='return install(event);'></img>";
+				document.getElementById("content_div").innerHTML = "<img src='" + prefImgSrc + "' onclick='javascript:return install(event);'></img>";
 				function install (aEvent) {
 					try {
 						for (var a = aEvent.target; a.href === undefined;) a = a.parentNode;
