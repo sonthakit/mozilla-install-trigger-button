@@ -20,10 +20,9 @@
 				var prefUrl = prefs.getString("url");
 				var prefHash = "sha1:" + prefs.getString("hash");
 				var prefImgSrc = prefs.getString("imgSrc");
-				document.getElementById("content_div").innerHTML = "<img src='" + prefImgSrc + "' onclick='javascript:return install(event);'></img>";
+				document.getElementById("content_div").innerHTML = "<img src='" + prefImgSrc + "' onclick='return install(event);'></img>";
 				function install (aEvent) {
 					try {
-						for (var a = aEvent.target; a.href === undefined;) a = a.parentNode;
 						var params = {
 							"Foo": {
 								URL: prefUrl,
